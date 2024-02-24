@@ -1,0 +1,117 @@
+.principal {
+    background: linear-gradient(to bottom, $corBackground, $corBackground), url('../assets/principal.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+    .cabecalho {
+        width: 97%;
+        height: 100px;
+        @include flexBox(row, space-between, center);
+
+        .logo {
+            background-color: $corAzulClaro;
+            @include flexBox(row, center, center);
+            max-width: 290px;
+            width: 100%;
+            height: 50px;
+            border-radius: 0px 20px 20px 0px;
+
+            .logo-item {
+                font-size: 1.4em;
+                font-weight: 600;
+                color: $corBranco;
+            }
+        }
+
+        .botao {
+            background-color: $corAzulClaro;
+            @include flexBox(row, center, center);
+            height: 50px;
+            max-width: 120px;
+            width: 100%;
+            border-radius: 5px;
+            text-decoration: none;
+            color: $corBranco;
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: 600;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .escrito {
+        @include flexBox(row, center, center);
+        height: 600px;
+        width: 100%;
+       
+        .paragrafo {
+            max-width: 900px;
+            width: 90%;
+            line-height: 1.8em;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: $corBranco;
+
+            span {
+                color: $corAzulClaro;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media(max-width: 650px){
+    .principal .cabecalho  {
+        height: auto;
+        margin: auto;
+        padding: 15px 0px;
+        @include flexBox(column, center, center);
+        gap: 25px 0px;
+    }
+
+    .principal .escrito .paragrafo {
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 500px) {
+    .principal .escrito {
+        height: auto;
+        padding: 20px 0px;
+
+        .paragrafo {
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media(max-width: 400px) {
+    .principal .cabecalho .logo  {
+        max-width: 220px;
+        
+        .logo-item {
+            font-size: 1.2em;
+        }
+    }
+
+    .principal .escrito .paragrafo {
+        font-size: 1.1em;
+    }
+}
+
+@media(max-width: 310px) {
+    .principal .escrito .paragrafo {
+        font-size: 1em;
+    }
+}
+
+
+

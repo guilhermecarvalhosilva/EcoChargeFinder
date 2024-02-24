@@ -1,0 +1,83 @@
+.mapa {
+    width: 100%;
+    height: auto;
+
+    .mapa-titulo {
+        width: 100%;
+        height: 100px;
+        background-color: $corBackground;
+        @include flexBox(row, center, center);
+
+        .titulo-item {
+            color: $corBranco;
+            font-size: 2.3em;
+            font-weight: 500;
+        }
+    }
+
+
+    .mapa-escrito {
+        background: linear-gradient(to bottom, $corBackground, $corBackground), url('../assets/mapa.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+        @include flexBox(row, center, center);
+
+        .paragrafo {
+            max-width: 900px;
+            width: 90%;
+            line-height: 1.8em;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: $corBranco;
+
+            span {
+                color: $corAzulClaro;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media(max-width: 650px) {
+    .mapa .mapa-escrito .paragrafo {
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 550px) {
+    .mapa .mapa-titulo .titulo-item {
+        font-size: 2em;
+    }
+}
+
+@media(max-width: 500px) {
+    .mapa .mapa-escrito .paragrafo {
+        font-size: 1.2em;
+    }
+}
+
+
+
+@media(max-width: 400px) {
+    .mapa .mapa-escrito .paragrafo {
+        font-size: 1.1em;
+    }
+}
+
+@media(max-width: 360px) {
+    .mapa .mapa-titulo .titulo-item {
+        font-size: 1.7em;
+    }
+}
+
+
+@media(max-width: 310px) {
+    .mapa .mapa-escrito .paragrafo {
+        font-size: 1em;
+    }
+}
+

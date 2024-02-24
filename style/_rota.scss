@@ -1,0 +1,74 @@
+.rota {
+    @include flexBox(column, center, center);
+    gap: 50px 0px;
+    background: linear-gradient(to bottom, $corBackground, $corBackground), url('../assets/rota.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+
+    .rota-titulo {
+        color: $corBranco;
+        font-size: 2.3em;
+        font-weight: 500;
+        text-align: center;
+        width: 90%;
+    }
+
+    .rota-escrito {
+        max-width: 900px;
+        width: 90%;
+        line-height: 1.8em;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 500;
+        color: $corBranco;
+
+        span {
+            color: $corAzulClaro;
+            font-weight: 600;
+        }
+    }
+}
+
+@media(max-width: 650px) {
+    .rota .rota-escrito{
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width: 500px) {
+    .rota .rota-escrito{
+        font-size: 1.2em;
+    }
+}
+
+
+
+@media(max-width:496px){
+    .rota .rota-titulo{
+        line-height: 1.5em;
+    }
+}
+
+@media(max-width: 400px) {
+    .rota .rota-escrito{
+        font-size: 1.1em;
+    }
+}
+
+@media(max-width: 360px) {
+    .rota .rota-titulo  {
+        font-size: 1.7em;
+    }
+}
+
+
+@media(max-width: 310px) {
+    .rota .rota-escrito{
+        font-size: 1em;
+    }
+}
+
+

@@ -1,0 +1,77 @@
+.rodape {
+    background-color: $corFooter;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    @include flexBox(column, center, center);
+    gap: 35px 0px;
+
+    .logo {
+        background-color: $corAzulClaro;
+        @include flexBox(row, center, center);
+        max-width: 290px;
+        width: 100%;
+        height: 50px;
+        border-radius: 0px 20px 20px 0px;
+
+        .logo-item {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: $corBranco;
+        }
+    }
+
+    .link {
+        @include flexBox(row, center, center);
+        gap: 0px 30px;
+
+        .link-item {
+            color: $corBranco;
+            font-size: 1.6em;
+            transition: 0.5s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    .paragrafo {
+        color: $corBranco;
+        font-size: 1.1em;
+        font-weight: 600;
+        text-align: center;
+        width: 90%;
+    }
+}
+
+@media(max-width: 670px) {
+    .rodape{
+        padding: 35px 0px;
+    }
+}
+
+@media(max-width: 400px) {
+    .rodape .logo   {
+        max-width: 220px;
+        
+        .logo-item {
+            font-size: 1.2em;
+        }
+    }
+
+    .rodape .link .link-item {
+        font-size: 1.4em;
+    }
+
+    .rodape .paragrafo {
+        font-size: 1em;
+    }
+    
+}
+
+@media(max-width: 310px) {
+    .rodape .paragrafo {
+        font-size: 0.9em;
+    }
+}
